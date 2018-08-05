@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+	<mapper namespace="lizhencai.ssm.mapper.ArticleMapperCustom" >
+    <!-- 使用动态的sql，满足条件进行sql的拼接 -->
+    <sql id="query_user_where">
+        <!-- <if test="user!=null">
+            <if test="user.id!=null">
+       			id =${user.id} 
+         	</if>
+            <if test="user.username!=null">
+       			username =${user.username} 
+         	</if>
+            <if test="user.password!=null">
+       			and password =${user.password} 
+         	</if>
+        </if>  -->
+    </sql>
+    
+    <select id="findarticlelist_by_user" parameterType="lizhencai.ssm.po.custom.UserCustom" resultType="lizhencai.ssm.po.custom.ArticleCustom">
+        select * from article where username=#{username}
+    </select>
+    
+      
+</mapper>

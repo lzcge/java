@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+     <!-- <properties resource="config/db.properties"></properties> -->
+    <typeAliases > 
+        <!-- <typeAlias type="lizhencai.ssm.po.User" alias="user"/> -->
+      <!--   批量定义别名，用包的名字 -->
+        <package name="lizhencai.ssm.po.custom"/>
+    </typeAliases>  
+    
+    
+	 <mappers>	    
+	    	<!--当在spring中配置了扫描器后这一句就不在需要了
+	        	<mapper  resource="lizhencai/mapper/UserMapper.xml"></mapper>  
+	        	 <mapper class="lizhencai.mapper.UserMapper"/>
+	        	<package name="User.xml"/>    
+	        	<mapper resource="User.xml"/> -->
+	</mappers> 
+     
+ </configuration>
