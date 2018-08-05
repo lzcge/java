@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+
+<servlet>
+	<servlet-name>UserServlet</servlet-name>
+	<servlet-class>lizhencai.servlet.UserServlet</servlet-class>
+
+</servlet>
+<servlet-mapping>
+	<servlet-name>UserServlet</servlet-name>
+	<url-pattern>/UserServlet</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+	<servlet-name>SendMessageServlet</servlet-name>
+	<servlet-class>lizhencai.servlet.SendMessageServlet</servlet-class>
+
+</servlet>
+<servlet-mapping>
+	<servlet-name>SendMessageServlet</servlet-name>
+	<url-pattern>/SendMessageServlet</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>checkimageservlet</servlet-name>
+    <servlet-class>lizhencai.servlet.checkimageservlet</servlet-class>
+    
+</servlet>
+<servlet-mapping>
+    <servlet-name>checkimageservlet</servlet-name>
+    <url-pattern>/checkimageservlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>HomePageServlet</servlet-name>
+	<servlet-class>lizhencai.servlet.HomePageServlet</servlet-class>
+
+</servlet>
+<servlet-mapping>
+	<servlet-name>HomePageServlet</servlet-name>
+	<url-pattern>/HomePage</url-pattern>
+</servlet-mapping>
+
+
+<resource-ref>
+      <description>mysql数据库连接池</description>
+      <res-ref-name>jdbc/mysqlds</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+      <res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>
+
+</web-app>

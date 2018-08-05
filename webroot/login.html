@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>李镇才的论坛</title>
+
+ <style type="text/css" media="screen">
+                .center{
+                        position:absolute;
+                        width: 120px;
+                        height: 120px;
+                        left: 50%;
+                        top: 30%;
+                        margin: -60px 0px 0px -60px;
+                        /*border: 1px solid #F00;*/
+                }
+  </style>
+  
+<script type="text/javascript">
+       function reloadCode()
+    {
+        var time=new Date().getTime();
+        document.getElementById("imagecode").src="/checkimageservlet?d="+time;
+    }
+</script>
+
+
+</head>
+
+<body background="image/background.jpg">
+
+	<div >
+		<font color="red" size="18px">******欢迎访问lzcge的bbs******</font>
+	</div>
+	
+	<div class="center" >
+		<form action="/UserServlet?cmd=getuser" method="post" >
+			姓名：<input type="text" name="username" value=""><br/>
+			密码：<input type="password" name="password" value=""><br/>
+			验证码:<input  type="text" name="checkCode"/>
+    		<img alt="验证码" id="imagecode" src="/checkimageservlet"/><br/>
+    		<a href="javascript:reloadCode();">看不清楚</a><br><br/><br/>
+			<input type="submit" value="登录"><br/>
+		</form>
+		<a href="/register.jsp"><font color="red">立即注册</font></a>
+	</div>
+	
+</body>
+</html>
